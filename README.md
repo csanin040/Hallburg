@@ -77,34 +77,6 @@ Während der Aufnahme bleibt das Fenster bedienbar: statt zu warten, sieht ein
 auf Eingaben reagieren. Aufnahme, Wiedergabe und Mikrofonauswahl sind so lange
 gesperrt, weil sie dasselbe Gerät belegen würden; ESC verwirft die Aufnahme.
 
-## Eigene Aufnahmen einbinden
-
-Pro Ort werden drei Dinge gebraucht:
-
-1. **Kartenbild** `assets/hamburg_map.png` – ein Ausschnitt von
-   [openstreetmap.org](https://www.openstreetmap.org) (Kartendaten ©
-   OpenStreetMap-Mitwirkende, ODbL). Die Markerkoordinaten passen zum
-   mitgelieferten Ausschnitt von 992 × 902 Pixeln.
-2. **Foto** des Ortes als JPG oder PNG nach `assets/photos/`. HEIC liest Qt nur
-   unter macOS und dort achtmal langsamer, weil der Decoder das verkleinerte
-   Einlesen nicht beherrscht. Umwandeln mit
-   `sips -s format jpeg -s formatOptions 90 foto.HEIC --out foto.jpg`.
-3. **Impulsantwort** als WAV nach `assets/irs/`.
-
-Danach den Ort in `locations.json` eintragen. Stereo, 44100 Hz und Vorlauf vor
-dem Direktschall sind kein Problem: das Programm rechnet auf Mono und 48000 Hz
-um und schneidet selbst zu.
-
-**Marker verschieben:** Ein Klick auf eine freie Stelle der Karte gibt die
-Koordinaten im Terminal aus. `map_x` und `map_y` meinen die Mitte des Markers.
-
-**Tipps für die Aufnahme:** Pro Ort zwei Mitschnitte derselben Sweep-Datei –
-einmal das Mikrofon 20–30 cm vor dem Lautsprecher als Referenz, einmal an der
-Hörerposition. Die Referenz enthält den Frequenzgang des Lautsprechers und lässt
-ihn herausrechnen. Den Pegel niedrig wählen, ein übersteuerter Sweep ergibt eine
-verzerrte Impulsantwort; die Pause zwischen zwei Sweeps länger als die
-Nachhallzeit des Ortes.
-
 ## Die wichtigsten Funktionen
 
 **`utils.fft_convolve(signal, ir)`** – das Kernstück. Eine Faltung im Zeitbereich
