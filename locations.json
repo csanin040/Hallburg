@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Alter Elbtunnel",
+    "description": "Gekachelte Röhre 24 m unter der Elbe, 426 m lang. Harte Wände, kaum Dämpfung – der längste Nachhall im Projekt.",
+    "map_x": 183,
+    "map_y": 665,
+    "photo": "assets/photos/elbtunnel.jpg",
+    "ir": "assets/irs/elbtunnel.wav"
+  },
+  {
+    "name": "Parkhaus Landungsbrücken",
+    "description": "Betondecken auf niedrigen Stützen, nach einer Seite offen zum Hafen. Kurze, harte Reflexionen zwischen den Stellplätzen.",
+    "map_x": 259,
+    "map_y": 691,
+    "photo": "assets/photos/parkhaus.jpg",
+    "ir": "assets/irs/landungsbruecken_parkhaus.wav"
+  },
+  {
+    "name": "Passage der Städtepartnerschaften",
+    "description": "Unterirdischer Fußgängergang am Rathausmarkt, benannt nach Hamburgs Partnerstädten. Glatte Wände auf engem Querschnitt: unten langer Nachhall, oben schluckt es deutlich.",
+    "map_x": 554,
+    "map_y": 498,
+    "photo": "assets/photos/rathaus.jpg",
+    "ir": "assets/irs/passage_staedtepartnerschaften.wav"
+  },
+  {
+    "name": "Unterführung Sternschanze",
+    "description": "Fußgängerunterführung am Bahnhof Sternschanze. Enger Querschnitt aus glattem Beton: wenig Bass, dafür der hellste Nachhall der fünf Orte.",
+    "map_x": 172,
+    "map_y": 155,
+    "photo": "assets/photos/unterfuehrung_sternschanze.jpg",
+    "ir": "assets/irs/unterfuehrung_sternschanze.wav"
+  },
+  {
+    "name": "U-Bahnhof Überseequartier",
+    "description": "Station der U4 in der HafenCity. Glatte Flächen und viel Volumen, aber der kürzeste Nachhall der fünf Orte.",
+    "map_x": 602,
+    "map_y": 809,
+    "photo": "assets/photos/ueberseequartier.jpg",
+    "ir": "assets/irs/ueberseequartier_ubahn.wav"
+  }
+]
