@@ -44,10 +44,7 @@ pip install -r requirements.txt
 
 Unter macOS muss der Mikrofonzugriff einmal in den Systemeinstellungen unter
 *Datenschutz & Sicherheit → Mikrofon* erlaubt werden, sonst liefert die Aufnahme
-nur Stille statt einer Fehlermeldung. Stille kommt auch von einem Eingang, der
-nichts liefert – etwa Bluetooth-Kopfhörer. Dafür gibt es die Auswahlliste
-*Mikrofon*; sie wird beim Start einmal gelesen, ein später angeschlossenes Gerät
-erscheint erst nach einem Neustart.
+nur Stille statt einer Fehlermeldung.
 
 ## Starten
 
@@ -142,11 +139,6 @@ haben, das eine Oberklasse rechtfertigen würde.
 | `services.load_locations` | `KeyError` und `TypeError` je Eintrag – ein unvollständiger Ort wird übersprungen, statt die ganze Karte zu verlieren |
 | `gui.LocationView.show_location` | `soundfile.LibsndfileError` – deckt fehlende *und* beschädigte WAV-Dateien ab |
 | `gui.LocationView.record_and_play` und `play_voice` | `sounddevice.PortAudioError` – kein Audiogerät oder Gerät belegt |
-
-Ein **fehlendes Foto** wird dagegen mit einer if-Abfrage geprüft, weil das hier
-besser passt als `try-except`. Beachtenswert: `soundfile` meldet eine fehlende
-Datei nicht als `FileNotFoundError`, sondern ebenfalls als `LibsndfileError` –
-ein `except FileNotFoundError` würde den Fall gar nicht erfassen.
 
 ## Tests
 
